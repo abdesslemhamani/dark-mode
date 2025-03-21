@@ -1,14 +1,28 @@
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    height: auto;
-    align-items: center;
-    transition: 0.6s;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.input {
-    visibility: hidden;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container */
+.container {
+    text-align: center;
+}
+
+/* Toggle Switch */
+.checkbox {
+    display: none;
 }
 
 .label {
@@ -20,10 +34,11 @@ body {
     border-radius: 25px;
     cursor: pointer;
     position: relative;
+
 }
 
 .circle {
-    width: 12px;
+    width: 20px;
     height: 20px;
     background-color: white;
     border-radius: 50%;
@@ -32,11 +47,16 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-.input.label {
-    background-color: white;
+/* Dark Mode Styles */
+body.dark {
+    background-color: #333;
+    color: white;
 }
 
-.input.label.circle {
-    transition: transform 0.3s ease-in-out;
-    background-color: black;
+body.dark .label {
+    background-color: #222;
+}
+
+body.dark .circle {
+    transform: translateX(25px);
 }
