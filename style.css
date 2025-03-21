@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    align-items: center;
+    transition: 0.6s;
+}
+
+.input {
+    visibility: hidden;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+.circle {
+    width: 12px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 3px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.input.label {
+    background-color: white;
+}
+
+.input.label.circle {
+    transition: transform 0.3s ease-in-out;
+    background-color: black;
+}
